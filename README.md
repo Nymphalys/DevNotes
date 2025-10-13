@@ -84,7 +84,7 @@ If you want to fix something or add new content:
 2. **Clone your fork** locally:
 
    ```bash
-   git clone https://github.com/your-username/DevNotes.git
+   git clone https://github.com/Nymphalys/DevNotes.git
    cd DevNotes
    ```
 
