@@ -280,3 +280,64 @@ Filters elements where `.product` matches shell variable `$product`.
 - `select()` filters elements by a condition.
 
 ---
+
+## 1. Developer Environment Setup
+
+### Step 1: Install jq
+
+- **Linux/Debian/Ubuntu:**
+
+  ```bash
+  sudo apt-get update
+  sudo apt-get install jq
+  ```
+
+- **macOS (via Homebrew):**
+
+  ```bash
+  brew install jq
+  ```
+
+- **Windows:**
+
+  - Download pre-compiled binaries from [https://stedolan.github.io/jq/download/](https://stedolan.github.io/jq/download/).
+  - Or install using package managers like Chocolatey:
+
+    ```bash
+    choco install jq
+    ```
+
+### Step 2: Verify Installation
+
+Run:
+
+```bash
+jq --version
+```
+
+Expected output:
+
+```
+jq-1.6
+```
+
+
+## 5. Additional Resources
+
+- Official jq manual: [https://stedolan.github.io/jq/manual/](https://stedolan.github.io/jq/manual/)
+- JSON format standards: [https://www.json.org/json-en.html](https://www.json.org/json-en.html)
+- Interactive jq playground: [https://jqplay.org/](https://jqplay.org/)
+
+---
+
+## Summary
+
+This document helps developers quickly understand:
+
+- How to set up jq and validate installation.
+- How to use jq for common JSON tasks.
+- What advanced topics need more cheat sheet work.
+- How to report or contribute to improve community resources.
+
+
+
