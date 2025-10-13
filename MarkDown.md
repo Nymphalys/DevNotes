@@ -21,8 +21,8 @@ _Italic Text_
 
 `inline code`
 
-```bash
-echo "code block"
+```c++
+// your code here
 ```
 
 > Blockquote
