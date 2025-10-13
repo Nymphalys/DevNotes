@@ -141,16 +141,17 @@ Markdown is a lightweight markup language used to format text with simple syntax
 
 **Code block:**
 
-```markdown
-```bash
-echo "code block"
-```
-```
 
+```markdown
+
+```language
+// your code here
+// end with ```
+```
 **Output:**
 
-```bash
-echo "code block"
+```c++
+// your code here
 ```
 
 ---
@@ -227,16 +228,6 @@ echo "code block"
 
 ---
 
-### Method 2: Embed HTML5 video (works only in some Markdown renderers, NOT standard GitHub README)
-
-```html
-<video width="480" controls>
-  <source src="videos/sample-video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-```
-
----
 
 ## Resources
 
