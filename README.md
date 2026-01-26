@@ -117,7 +117,7 @@ If you want to fix something or add new content:
 ## Contact  
 
 For questions or help, please contact:  
-- Project Maintainer: kumariladli2882@gmail.com  
+- Project Maintainer: [nymphalys](https://github.com/nymphalys) 
 
 
 ---
