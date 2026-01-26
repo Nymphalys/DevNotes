@@ -244,16 +244,11 @@ or
 
 | Element           | Markdown Syntax                                         | Description                                   |
 |-------------------|---------------------------------------------------------|-----------------------------------------------|
-| Table             | `| Header | Title |` and rows with `| Cell | Cell |`   | Create tables                                 |
-| Fenced Code Block  | <pre>```json <br>{ "key": "value" } <br>```</pre>     | JSON or other code blocks                      |
 | Footnote          | `Here is a footnote.[^1]` and `[^1]: Footnote text.`    | Add footnotes                                 |
 | Heading ID        | `### My Heading {#id}`                                  | Custom HTML IDs for headings                   |
-| Definition List   | `Term : Definition`                                     | Create definition lists                         |
-| Strikethrough     | `~~struck text~~`                                       | Strike out text                                |
-| Task List         | `- [ ] item` / `- [x] done item`                        | Todo checklists                               |
+| Definition List   | `Term : Definition`                                     | Create definition lists                         |                              |
 | Emoji             | `:smile:`                                              | Emoji codes (varies by Markdown processor)    |
-| Subscript         | `H~2~O`                                                | Subscript (GFM extensions)                    |
-| Superscript       | `X^2^`                                                 | Superscript (GFM extensions)                  |
+
 
 ---
 
@@ -290,5 +285,101 @@ or
 - Markdown is sensitive to spacing and indentation; preview before publishing.
 
 ---
+## 11. Alignment in Markdown
+
+**Input:**
+
+```markdown
+<p align="center">Centered text</p>
+<div align="center">
+  <b>Center everything</b>
+</div>
+```
+
+**Output:**
+<p align="center">Centered text</p>
+<div align="center">
+  <b>Center everything</b>
+</div>
+
+---
+## 12. Images using HTML
+
+```markdown
+<img src="https://..." width="200" />
+
+<img src="https://..." width="40" height="40" />
+</div>
+```
+
+---
+
+## 13. Links in Markdown using HTML
+
+**Input:**
+
+```markdown
+<a href="https://github.com">GitHub</a>
+</div>
+```
+
+**Output:**
+<a href="https://github.com">GitHub</a>
+
+### Opens in new tab
+**Input:**
+
+```markdown
+<a href="https://github.com" target="_blank">GitHub</a>
+</div>
+```
+
+**Output:**
+<a href="https://github.com" target="_blank">GitHub</a>
+
+---
+## 14. Collapsible sections in Markdown using HTML
+
+**Input:**
+
+```markdown
+<details>
+  <summary>Click to expand</summary>
+
+  Hidden content here  
+  Code blocks  
+  Images  
+
+</details>
+
+```
+
+**Output:**
+<details>
+  <summary>Click to expand</summary>
+
+  Hidden content here  
+  Code blocks  
+  Images  
+
+</details>
+
+---
+## 15. Keyboard Shortcut Representation in Markdown using HTML
+
+**Input:**
+
+```markdown
+<kbd>Ctrl</kbd> + <kbd>C</kbd>
+
+```
+
+**Output:**
+<kbd>Ctrl</kbd> + <kbd>C</kbd>
+
+
+---
+
+
 
 This cheat sheet covers fundamental and extended Markdown syntax for creating clean, effective documentation and content.
