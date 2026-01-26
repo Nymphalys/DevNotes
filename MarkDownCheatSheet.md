@@ -1,6 +1,5 @@
 
 # Markdown Cheat Sheet: Purpose, Usage & Examples
-
 ---
 
 ### Sample Markdown Content
@@ -11,7 +10,7 @@
 ### Heading 3
 
 **Bold Text**
-
+*Italic Text*
 _Italic Text_
 
 - List item 1  
@@ -37,6 +36,7 @@ _Italic Text_
 ## Purpose
 
 Markdown is a lightweight markup language used to format text with simple syntax, creating headings, lists, links, code blocks, and more. It is widely used for README files, documentation, blogs, and writing content that can be converted to HTML.
+
 
 ---
 
@@ -68,12 +68,20 @@ Markdown is a lightweight markup language used to format text with simple syntax
 
 ```markdown
 *Italic Text*
+_Italic Text_
 ```
 
+~~Strikethrough:~~
+
+```markdown
+~~Strikethrough Text~~
+
+```
 **Output:**
 
 **Bold Text**  
 *Italic Text*  
+~~Strikethrough Text~~
 
 ---
 
@@ -85,12 +93,26 @@ Markdown is a lightweight markup language used to format text with simple syntax
 - Item 1
 - Item 2
 ```
+**Check list:**
+
+```markdown
+- [x] Item 1 // - needed for checklist
+- [space] Item 2 // space needed for not done task
+```
 
 **Ordered list:**
 
 ```markdown
 1. First
 2. Second
+3. Third
+```
+or
+
+```markdown
+1. First
+1. Second
+1. Third
 ```
 
 **Output:**
@@ -98,8 +120,12 @@ Markdown is a lightweight markup language used to format text with simple syntax
 - Item 1  
 - Item 2
 
+- [x] Item 1
+- [ ] Item 2
+
 1. First  
 2. Second  
+3. Third  
 
 ---
 
@@ -108,12 +134,12 @@ Markdown is a lightweight markup language used to format text with simple syntax
 **Link:**
 
 ```markdown
-[Example Link](https://example.com)
+[Example Link Text](https://example.com)
 ```
 
 **Output:**
 
-[Example Link](https://example.com)
+[Example Link Text](https://example.com)
 
 **Image:**
 
@@ -154,6 +180,23 @@ Markdown is a lightweight markup language used to format text with simple syntax
 // your code here
 ```
 
+**Code Diff block:**
+
+
+```markdown
+
+// ```diff
++ your changed part code here
+- your removed part code here
+// ```
+```
+**Output:**
+
+```diff
++ your changed part code here
+- your removed part code here
+```
+
 ---
 
 ## 6. Blockquotes
@@ -172,7 +215,7 @@ Markdown is a lightweight markup language used to format text with simple syntax
 
 ```markdown
 | Header 1    | Header 2  |
-|-------------|-----------|
+|-------------|-----------| or |-|-| 
 | Cell 1      | Cell 2    |
 | Cell 3      | Cell 4    |
 ```
@@ -184,6 +227,7 @@ Markdown is a lightweight markup language used to format text with simple syntax
 | Cell 1      | Cell 2    |
 | Cell 3      | Cell 4    |
 
+> |:- | for left alignment ,|-:| for right alignment, ,|:-:| for centre alignment 
 ---
 
 ## 8. Horizontal Rule
@@ -208,7 +252,6 @@ Markdown is a lightweight markup language used to format text with simple syntax
 | Strikethrough     | `~~struck text~~`                                       | Strike out text                                |
 | Task List         | `- [ ] item` / `- [x] done item`                        | Todo checklists                               |
 | Emoji             | `:smile:`                                              | Emoji codes (varies by Markdown processor)    |
-| Highlight         | `==highlight==`                                        | Yellow highlight (GFM)                         |
 | Subscript         | `H~2~O`                                                | Subscript (GFM extensions)                    |
 | Superscript       | `X^2^`                                                 | Superscript (GFM extensions)                  |
 
@@ -238,7 +281,10 @@ Markdown is a lightweight markup language used to format text with simple syntax
 ---
 
 ## General Notes
-
+- Github Markdown supports HTML 
+   - Tags, like `<br>` ,`<p>Para</p>`, `<sup>text</sup> ` , `<sub>text</sub>` , `<mark>text</mark>` , `<small>text</small>`
+   - Don not support some HTML Tags like `<video>`, `<iframe>`, `<script>`
+   - Html tags use in markdown offer more option in styling
 - Use empty lines between elements for proper rendering.  
 - Use backticks for inline and block code.  
 - Markdown is sensitive to spacing and indentation; preview before publishing.
