@@ -1,5 +1,5 @@
 
-# Markdown Cheat Sheet: Purpose, Usage & Examples
+# GitHub Markdown Cheat Sheet: Purpose, Usage & Examples
 ---
 
 ### Sample Markdown Content
@@ -240,16 +240,11 @@ or
 
 ---
 
-## 9. Extended Syntax (Support May Vary)
+## 9. Emoji
 
-| Element           | Markdown Syntax                                         | Description                                   |
-|-------------------|---------------------------------------------------------|-----------------------------------------------|
-| Footnote          | `Here is a footnote.[^1]` and `[^1]: Footnote text.`    | Add footnotes                                 |
-| Heading ID        | `### My Heading {#id}`                                  | Custom HTML IDs for headings                   |
-| Definition List   | `Term : Definition`                                     | Create definition lists                         |                              |
-| Emoji             | `:smile:`                                              | Emoji codes (varies by Markdown processor)    |
-
-
+ Emoji   `:smile: `             
+**Output:**
+😄
 ---
 
 ## 10. Videos in Markdown
@@ -380,6 +375,64 @@ or
 
 ---
 
+## 15 📌 How to Add Table of Contents in Markdown
+
+✅ 1️⃣ Manual TOC (BEST for GitHub)
+
+GitHub does NOT support automatic TOC syntax, so people write it manually using links.
+
+Step 1: Write your headings
+```markdown
+## Introduction
+## Installation
+## Usage
+## Contributing
+## License
+```
+Step 2: Create TOC using anchor links
+## Table of Contents
+```markdown
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+```
+
+**Output**
+
+### Introduction
+### Installation
+### Usage
+### Contributing
+### License
+
+
+### Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+  
+<br>
+
+✅ How GitHub generates heading IDs
+
+GitHub:Converts text to lowercase, Replaces spaces with - , Removes special characters
+
+- Example `## Getting Started Guide` Becomes: #getting-started-guide
+
+✅ 2️⃣ Heading Links can be used with HTML as anchors
+```markdown  
+<h2 align="center">📚 Table of Contents</h2>
+
+<p align="center">
+  <a href="#introduction">Introduction</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a>
+</p>
+```
 
 
 This cheat sheet covers fundamental and extended Markdown syntax for creating clean, effective documentation and content.
