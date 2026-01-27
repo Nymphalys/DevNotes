@@ -375,7 +375,7 @@ or
 
 ---
 
-## 15 📌 How to Add Table of Contents in Markdown
+## 16 📌 How to Add Table of Contents in Markdown
 
 ✅ 1️⃣ Manual TOC (BEST for GitHub)
 
