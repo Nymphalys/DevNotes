@@ -132,6 +132,7 @@ or
 ## 4. Links and Images
 
 **Link:**
+Press <kbd>cmd + L </kbd>
 
 ```markdown
 [Example Link Text](https://example.com)
