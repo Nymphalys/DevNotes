@@ -12,7 +12,6 @@
 | <kbd>Cmd + T</kbd>          | Open new tab / file                        |
 | <kbd>Cmd + Shift + N</kbd>  | New window (VS Code) / New folder (Finder) |
 | <kbd>Cmd + Ctrl + N</kbd>   | New folder with selected items (Finder)    |
-
 | **— Close & Manage —**      |                                            |
 | <kbd>Cmd + W</kbd>          | Close current tab                          |
 | <kbd>Cmd + Shift + W</kbd>  | Close window                               |
@@ -78,7 +77,6 @@
 | <kbd>Cmd + V</kbd>          | Paste             |
 | <kbd>Cmd + Option + V</kbd> | Move (Cut-Paste)  |
 | <kbd>Option + Drag</kbd>    | Force copy        |
-| <kbd>Cmd + Drag</kbd>       | Force move        |
 | Drag (same disk)            | Move              |
 | Drag (different disk)       | Copy              |
 | ➕ Cursor                    | Indicates copying |
@@ -112,7 +110,8 @@
 | Trim (Quick Look video)          | Trim video           |
 | Convert (Quick Look)             | Convert image format |
 | Sign PDF (Quick Look)            | Add signature        |
-| <kbd>Cmd + K</kbd> (Preview app) | Crop image           |
+| <kbd>Cmd + K</kbd> (Preview app) | Crop image after selecting area     |
+| <kbd>Cmd + Enter</kbd> | Reveal file in Finder  |
 
 ---
 
@@ -167,12 +166,14 @@
 
 ---
 
+
 ## ✍️ Text Editing
 
 | Shortcut                                         | Action                 |
 | ------------------------------------------------ | ---------------------- |
 | **— Basic Editing —**                            |                        |
 | <kbd>Cmd + C</kbd> / <kbd>V</kbd> / <kbd>X</kbd> | Copy / Paste / Cut     |
+| <kbd>Cmd + Shift + Option + V</kbd> | Paste without formatting     |
 | <kbd>Cmd + Z</kbd>                               | Undo                   |
 | <kbd>Shift + Cmd + Z</kbd>                       | Redo                   |
 | **— Cursor Movement —**                          |                        |
@@ -181,13 +182,21 @@
 | **— Line Control —**                             |                        |
 | <kbd>Option + ↑ / ↓</kbd>                        | Move line              |
 | <kbd>Shift + Option + ↑ / ↓</kbd>                | Move / duplicate block |
-| <kbd>Cmd + Shift + K</kbd>                       | Delete line            |
-| <kbd>Cmd + Enter</kbd>                           | New line below         |
+| <kbd>Cmd + Shift + K</kbd>                       | Delete complete line            |
+| <kbd>Ctrl +  K</kbd>   | Delete line after cursor     |
+| <kbd>Cmd +  Del</kbd>  or <kbd>Ctrl + U</kbd>   | Delete line before cursor         |
+| <kbd>Cmd + Enter</kbd>  or  <kbd>Shift + Enter</kbd> | New line below         |
 | <kbd>Cmd + Shift + Enter</kbd>                   | New line above         |
+| **— Deleting —**                               |                        |
+| <kbd>Del</kbd>                               | Backward character del           |
+| <kbd>Option + Del</kbd>                         | Backward word del     |
+| <kbd>Fn + Del</kbd>                               | Forward character del  |
+| <kbd>Fn + Option + Del</kbd>                      | Forward word del |
 | **— Formatting —**                               |                        |
 | <kbd>Cmd + K</kbd>                               | Insert link            |
 | <kbd>Cmd + B</kbd>                               | Bold                   |
 | <kbd>Cmd + I</kbd>                               | Italic                 |
+| <kbd>Ctrl + Cmd + Space</kbd> or <kbd>Fn</kbd>| Emoji & symbols panel |
 
 ---
 
@@ -238,8 +247,8 @@
 | <kbd>Ctrl + Cmd + F</kbd>            | Full screen        |
 | **— View —**                         |                    |
 | <kbd>Cmd + + / -</kbd>               | Zoom in / out      |
-| <kbd>Cmd + 0</kbd>                   | Reset zoom         |
-| <kbd>Cmd + 1</kbd>                   | Focus editor       |
+| <kbd>Cmd + 0</kbd>                   | Reset zoom  /  Focus side bar in VS    |
+| <kbd>Cmd + 1</kbd>                   | Focus editor in VS      |
 
 ---
 
@@ -266,6 +275,10 @@
 | Drag folder         | Paste path           |
 | `history`           | Show command history |
 | `!!`                | Run last command     |
+| <kbd>Ctrl+ L</kbd> | Clear screen            |
+| <kbd>Ctrl+ R</kbd> | Reverse search history  |
+| <kbd>Tab</kbd>                 | Auto-complete           |
+| <kbd>Option</kbd> + Click      | Move cursor in terminal |
 
 ---
 
@@ -281,8 +294,8 @@
 | **— Navigation —**          |                      |
 | <kbd>Cmd + R</kbd>          | Reload               |
 | <kbd>Cmd + Click</kbd>      | Open link in new tab |
-| <kbd>Cmd + <</kbd>          | Back                 |
-| <kbd>Cmd + ></kbd>          | Forward              |
+| <kbd>Cmd + <</kbd> or <kbd>Cmd + [</kbd>          | Back                 |
+| <kbd>Cmd + ></kbd> or <kbd>Cmd + ]</kbd>          | Forward              |
 | <kbd>Cmd + L</kbd>          | Address bar          |
 | <kbd>Cmd + Shift + A</kbd>  | Search tabs          |
 
@@ -349,13 +362,7 @@
 
 ---
 
-## 📦 File Move / Copy Logic (macOS Special) (Addition)
 
-| Shortcut                                                             | Action                   |
-| -------------------------------------------------------------------- | ------------------------ |
-| <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | Paste without formatting |
-
----
 
 ## 🔍 Spotlight / Lookup (Addition)
 
@@ -363,34 +370,10 @@
 | ----------------------------------------------- | ---------------------------------- |
 | <kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>D</kbd> | Look up word (dictionary anywhere) |
 
----
 
-| --------------------------------- | ---------------------- |
-## 👀 Quick Look & Preview (Additions)
 
-| Shortcut                          | Action                 |
-| <kbd>Cmd</kbd> + <kbd>C</kbd>     | Copy text from preview |
-| <kbd>Cmd</kbd> + <kbd>A</kbd>     | Select all in preview  |
-| <kbd>Cmd</kbd> + <kbd>Enter</kbd> | Reveal file in Finder  |
 
----
 
-## ✍️ Text Editing (Addition)
-
-| Shortcut                                            | Action                |
-| --------------------------------------------------- | --------------------- |
-| <kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>Space</kbd> | Emoji & symbols panel |
-
----
-
-## 🧪 Terminal (Mac) (Additions)
-
-| Shortcut                       | Action                  |
-| ------------------------------ | ----------------------- |
-| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Clear screen            |
-| <kbd>Ctrl</kbd> + <kbd>R</kbd> | Reverse search history  |
-| <kbd>Tab</kbd>                 | Auto-complete           |
-| <kbd>Option</kbd> + Click      | Move cursor in terminal |
 
 ---
 
