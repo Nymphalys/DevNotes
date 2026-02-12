@@ -371,6 +371,11 @@
 | <kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>D</kbd> | Look up word (dictionary anywhere) |
 
 
+## 🔍 Color Picking
+
+| Shortcut                                        | Action                             |
+| ----------------------------------------------- | ---------------------------------- |
+| <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | copy color after opening digital color meter |
 
 
 
