@@ -293,6 +293,7 @@
 | <kbd>F</kbd>             | Full screen   |
 | <kbd>0–9</kbd>           | Jump to %     |
 | <kbd>↑ / ↓</kbd>         | Volume        |
+| <kbd> / </kbd>         | Move to search Bar |
 
 ---
 
