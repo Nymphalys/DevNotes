@@ -8,17 +8,18 @@
 | Shortcut                    | Action                                     |
 | --------------------------- | ------------------------------------------ |
 | **— Open —**                |                                            |
-| <kbd>Cmd + N</kbd>          | Open new window (most apps)                |
-| <kbd>Cmd + Shift + N</kbd>  | New window (VS Code) / New folder (Finder) |
+| <kbd>Cmd + N</kbd>          | Open new window (most apps) / New file (VS Code) |
 | <kbd>Cmd + T</kbd>          | Open new tab / file                        |
-| <kbd>Cmd + N</kbd>          | New file (VS Code)                         |
+| <kbd>Cmd + Shift + N</kbd>  | New window (VS Code) / New folder (Finder) |
 | <kbd>Cmd + Ctrl + N</kbd>   | New folder with selected items (Finder)    |
+
 | **— Close & Manage —**      |                                            |
 | <kbd>Cmd + W</kbd>          | Close current tab                          |
-| <kbd>Cmd + Shift + T</kbd>  | Reopen closed tab                          |
 | <kbd>Cmd + Shift + W</kbd>  | Close window                               |
+| <kbd>Cmd + Shift + T</kbd>  | Reopen closed tab                          |
 | <kbd>Cmd + Q</kbd>          | Quit app                                   |
 | <kbd>Cmd + M</kbd>          | Minimize window                            |
+| <kbd>Cmd + Option + M</kbd> | Minimize all window of current app  |
 | <kbd>Cmd + H</kbd>          | Hide app                                   |
 | <kbd>Cmd + Option + H</kbd> | Hide all except current                    |
 | <kbd>Ctrl + Cmd + Q</kbd>   | Lock screen                                |
@@ -30,10 +31,10 @@
 | Shortcut                        | Action                     |
 | ------------------------------- | -------------------------- |
 | **— App Navigation —**          |                            |
-| <kbd>Cmd + Tab</kbd>            | Switch between apps        |
+| <kbd>Cmd + Tab</kbd>   | Switch between apps        |
 | <kbd>Cmd + Shift + Tab</kbd>    | Reverse app switch         |
 | **— Tab & Window Navigation —** |                            |
-| <kbd>Ctrl + Tab</kbd>           | Switch tabs in same app    |
+| <kbd>Ctrl + Tab</kbd>     or <kbd>Cmd + ctrl + → / ← </kbd>   | Switch tabs in same app    |
 | <kbd>Ctrl + Shift + Tab</kbd>   | Reverse tab switch         |
 | <kbd>Cmd + `</kbd>              | Switch windows of same app |
 | <kbd>Cmd + Shift + `</kbd>      | Reverse window switch      |
@@ -54,6 +55,13 @@
 | <kbd>Cmd + 2</kbd>          | List view                |
 | <kbd>Cmd + 3</kbd>          | Column view              |
 | <kbd>Cmd + 4</kbd>          | Gallery view             |
+| <kbd>Cmd + Ctrl + 1</kbd>          | Sort By Name |
+| <kbd>Cmd + Ctrl + 2</kbd>          | Sort By  Kind               |
+| <kbd>Cmd + Ctrl + 3</kbd>          | Sort By Date Last Opened             |
+| <kbd>Cmd + Ctrl + 4</kbd>          | Sort By Date Added            |
+| <kbd>Cmd + Ctrl + 5</kbd>          | Sort By Date Modified            |
+| <kbd>Cmd + Ctrl + 6</kbd>          | Sort By Size            |
+| <kbd>Cmd + Ctrl + 7</kbd>          | Sort By Tag           |
 | <kbd>Cmd + J</kbd>          | View options             |
 | <kbd>Cmd + Shift + P</kbd>  | Toggle preview pane      |
 | <kbd>Cmd + Option + S</kbd> | Toggle sidebar           |
