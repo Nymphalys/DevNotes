@@ -1,0 +1,56 @@
+name: Notion to GitHub Branch
+
+# Run every hour or manually
+on:
+  schedule:
+    - cron: '0 * * * *' # every hour
+  workflow_dispatch: # allows manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      # Step 1: Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run the Notion sync script
+      - name: Run Notion sync
+        run: node sync_notion.js
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      # Step 5: Commit and push to notion-to-github branch
+      - name: Commit and push to branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout -B notion-to-github
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Sync from Notion $(date +%Y-%m-%d)"
+          git push -f origin notion-to-github
+
+      # Step 6: Create Pull Request
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_branch: notion-to-github
+          destination_branch: main
+          pr_title: "Sync from Notion - $(date +%Y-%m-%d)"
+          pr_body: "Automated sync from Notion workspace"
+          pr_allow_empty: false
