@@ -46,10 +46,11 @@ jobs:
 
       # Step 6: Create Pull Request
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+        uses: repo-sync/pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: notion-to-github
-          base: main
-          title: "Sync from Notion"
-          body: "Automated sync from Notion workspace"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_branch: notion-to-github
+          destination_branch: main
+          pr_title: "Sync from Notion - $(date +%Y-%m-%d)"
+          pr_body: "Automated sync from Notion workspace"
+          pr_allow_empty: false
