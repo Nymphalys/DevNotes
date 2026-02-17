@@ -1,0 +1,27 @@
+{
+  "name": "devnotes",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "sync_notion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nymphalys/DevNotes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nymphalys/DevNotes/issues"
+  },
+  "homepage": "https://github.com/Nymphalys/DevNotes#readme",
+  "dependencies": {
+    "@notionhq/client": "^5.9.0",
+    "dotenv": "^17.2.4",
+    "notion-to-md": "^3.1.9",
+    "simple-git": "^3.30.0"
+  }
+}
