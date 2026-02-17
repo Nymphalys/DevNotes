@@ -44,8 +44,8 @@ jobs:
       # Step 5: Commit and push to notion-to-github branch
       - name: Commit and push to branch
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "Kumari Ladli"
+          git config user.email "kumariladli2882@gmail.com"
           git checkout -B notion-to-github
           git add .
           git diff --quiet && git diff --staged --quiet || git commit -s -m "Sync from Notion $(date +%Y-%m-%d)"
