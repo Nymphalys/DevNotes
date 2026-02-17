@@ -336,10 +336,13 @@
 | <kbd>Cmd + Option + 0</kbd>    | Normal text        |
 | <kbd>Cmd + Option + 1–5</kbd>  | Heading 1–5        |
 | **— Indentation & Lists —**    |                    |
-| <kbd>Cmd + [</kbd>             | Decrease indent    |
-| <kbd>Cmd + ]</kbd>             | Increase indent    |
-| <kbd>Tab</kbd>                 | Indent list item   |
-| <kbd>Shift + Tab</kbd>         | Outdent list item  |
+| <kbd>Cmd + [</kbd>             | Decrease indent of entire line whithout selection   |
+| <kbd>Cmd + ]</kbd>             | Increase indent indent of entire line whithout selection|
+| Place cursor at the start of the first item of the list + <kbd>Tab</kbd>             | Increase indent of entire list   |
+| Place cursor at the start of the first item of the list + <kbd>Tab </kbd>+<kbd>Shift</kbd>             | Decrease indent of entire list |
+| <kbd>Tab</kbd>                 | Indent line after cursor |
+| <kbd>Shift + Tab</kbd>         | Outdent line after cursor|
+
 | **— Navigation & Editing —**   |                    |
 | <kbd>Cmd + F</kbd>             | Find               |
 | <kbd>Cmd + H</kbd>             | Replace            |
