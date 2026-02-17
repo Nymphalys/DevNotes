@@ -34,7 +34,9 @@ jobs:
 
       # Step 4: Run the Notion sync script
       - name: Run Notion sync
-        run: node sync_notion.js
+        run: |
+          echo '${{ secrets.NOTION_PAGE_IDS }}' > pages.json
+          node sync_notion.js
         working-directory: ./notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
