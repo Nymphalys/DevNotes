@@ -2,7 +2,7 @@
 # 
 
 
-Yo
+Select ,cmd K cmd F, format selection 
 
 
 Vite cli keyboard shortcuts 
