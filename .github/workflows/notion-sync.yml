@@ -1,10 +1,9 @@
 name: Notion to GitHub Branch
-
-# Run twice daily or manually
+# Run thrice daily or manually
 on:
   schedule:
-    - cron: '0 9,14,21 * * *' 
-  workflow_dispatch: # allows manual trigger
+    - cron: '0 9,14,21 * * *'
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -12,27 +11,35 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-
     steps:
-      # Step 1: Checkout repo from main
+      # Step 1: Checkout repo (shallow clone)
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 1
 
-      # Step 2: Setup Node.js
+      # Step 2: Cache npm dependencies
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # Step 3: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      # Step 3: Install dependencies
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
         working-directory: ./notion
 
-      # Step 4: Run the Notion sync script
+      # Step 5: Run Notion sync script
       - name: Run Notion sync
         run: |
           echo '${{ secrets.NOTION_PAGE_IDS }}' > pages.json
@@ -41,18 +48,18 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
-      # Step 5: Commit and push to notion-to-github branch
+      # Step 6: Commit and push to main branch
       - name: Commit and push to main branch
         run: |
-           git config user.name "Kumari Ladli"
-           git config user.email "kumariladli2882@gmail.com"
-           git checkout main
-           git pull origin main
-           git add .
-           git diff --quiet && git diff --staged --quiet || git commit -s -m "Sync from Notion $(date +%Y-%m-%d)"
-           git push origin main
+          git config user.name "Kumari Ladli"
+          git config user.email "kumariladli2882@gmail.com"
+          git checkout main
+          git pull origin main
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -s -m "Sync from Notion $(date +%Y-%m-%d)"
+          git push origin main
 
-      # Step 6: Create Pull Request
+      # Step 7: Create or update Pull Request on notion-to-github branch (optional)
       - name: Create Pull Request
         run: |
           DATE=$(date +%Y-%m-%d)
