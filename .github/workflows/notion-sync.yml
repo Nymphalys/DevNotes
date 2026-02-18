@@ -3,7 +3,7 @@ name: Notion to GitHub Branch
 # Run twice daily or manually
 on:
   schedule:
-    - cron: '0 9,21 * * *' # 9 AM and 9 PM UTC daily
+    - cron: '0 9,14,21 * * *' 
   workflow_dispatch: # allows manual trigger
 
 jobs:
