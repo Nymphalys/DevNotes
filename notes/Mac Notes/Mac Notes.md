@@ -5,6 +5,9 @@
 Select ,cmd K cmd F, format selection 
 
 
+Terminal 
+
+
 Vite cli keyboard shortcuts 
 
 
